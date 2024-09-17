@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { addPost, deletePost, ADD_POST, DELETE_POST } from "./action";
+import { ADD_POST, DELETE_POST } from "./action";
 
 const initialState = {
   posts: [],
@@ -9,7 +9,6 @@ const postReducer = (state = initialState, action: any) => {
   switch (action.type) {
     case ADD_POST: {
       return {
-        ...state,
         posts: [state.posts, action.payload],
       };
     }
