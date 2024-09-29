@@ -5,7 +5,6 @@ import { deletePost } from "@/redux/action";
 
 const PostContainer = () => {
   const { posts } = useSelector((state: any) => state.posts);
-  console.log("posts", posts)
   const dispatch = useDispatch();
 
   const handleDeletePost = (postId: string) => {
